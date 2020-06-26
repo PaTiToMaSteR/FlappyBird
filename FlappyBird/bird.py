@@ -2,6 +2,7 @@ import pygame.image
 from itertools import cycle
 import numpy
 
+
 class Bird(object):
 
     def __init__(self, screen, screen_width, screen_height):
@@ -53,6 +54,5 @@ class Bird(object):
         return self.bird_y
 
     def render(self):
-
         # Draw everything
         self.screen.blit(self.bird_images[self.bird_index], (self.bird_x, self.bird_y))
