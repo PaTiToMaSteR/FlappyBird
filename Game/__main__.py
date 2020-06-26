@@ -1,9 +1,9 @@
 import pygame
 import numpy as np
 
-from FlappyBird.background import Background
-from FlappyBird.bird import Bird
-from FlappyBird.obstacles import Obstacles
+from Game.background import Background
+from Game.bird import Bird
+from Game.obstacles import Obstacles
 
 screen_width = 288
 screen_height = 512
@@ -80,7 +80,7 @@ def main():
 
         def has_bird_collided_with_pipes(bird, obstacles):
             # Check if the bird touch ground
-            if bird.bird_height + bird.bird_y + 1 >= screen_height:
+            if bird.bird_height + bird.bird_y + 1 >= obstacles.base_y:
                 return True
             bird_bbox = pygame.Rect(bird.bird_x, bird.bird_y, bird.bird_width, bird.bird_height)
             pipe_boxes = []
